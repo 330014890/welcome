@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<center><h1>Welcome to my website</h1></center>
+<center><h4>Please enter your name</h4></center>
+<center><input type="text" id="myText" value=""></center>
+
+
+<p>Click the "Try it" </p >
+
+
+<center><button onclick="myFunction()">Try it</button></center>
+
+
+<p id="demo"></p >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+
+</head>
+<body>
+    <p>Please enter a number in the box</p >
+    <center><input type="text" id="num1">+<input type="text" id="num2"></center>
+    
+    <p>
+    <input type="button" value="sum" onclick="calc(add)">
+    </p >
+    
+    <p>result：<input type="text" id="result" readonly></p >
+     
+</body>
+<style>
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #336666;
+}
+
+li {
+float: left;
+border-right: 1px solid #bbb;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 24px 26px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+body {
+/* Old browsers */
+background: #ffcccc;
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(-45deg, #ffcccc, #00ffff);
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(-45deg,  #7373B9, #408080);
+margin: 0;
+padding: 0;
+}
+
+h1 {
+color: #FFF;
+font-size: 2em;
+padding-top: 100px;
+width: 100%;
+}
+
+h4
+ {
+   font-size: 1.6em;
+color: aliceblue;
+line-height: 1.3em;
+text-align: center;
+width: 100%;
+}
+
+
+p {
+color: aliceblue;
+line-height: 1.3em;
+text-align: center;
+width: 100%;
+}
+
+.byline {
+font-family: Helvetica;
+color: rgba(255, 255, 255, 0.5);
+float: left;
+font-size: 14px;
+padding-left: 10px;
+text-transform: uppercase;
+}
+
+.caption {
+display: block;
+font-family: 'Playfair Display', serif;
+font-size: 34px;
+font-style: italic;
+line-height: 34px;
+margin-left: 20px;
+padding: 10px;
+position: relative;
+text-align: center;
+top: 50%;
+width: 90%;
+}
+
+.content {
+padding: 40px;
+}
+
+
+.writer-img {
+-webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+-moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+float: left;
+  width: 50px;
+}
+</style>
+</html>
+<script>
+function myFunction() {
+  var x= document.getElementById("myText").value;
+  document.getElementById("demo").innerHTML = "welcome      "+ x;
+}
+        function calc(func){
+            var result = document.getElementById('result');
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+            if(isNaN(num1) || isNaN(num2)){
+                alert('please enter a number');
+                return false;
+            }
+            result.value = func(num1,num2);
+        }
+        function add(num1,num2){
+            return num1+num2;
+        }
+
+    </script>
